@@ -8,8 +8,13 @@ export default ({ Vue, isServer }) => {
       typeof window !== 'undefined'
         ? window.__VUEPRESS_ROUTER_BASE__ || '/'
         : this.$site.base
-
-    if (path.charAt(0) === '/') {
+    
+    console.log("Path here:", path);
+    
+    if (path === "/") {
+      return "index.html"
+    }
+    else if (path.charAt(0) === '/') {
       return base + path.slice(1)
     } else {
       return path
