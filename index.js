@@ -3,7 +3,7 @@ const { exec } = require('child_process')
 
 module.exports = (options, ctx) => {
   const { isProd, outDir } = ctx
-  const name = 'vuepress-plugin-ipfs'
+  const name = 'michaelolof-vuepress-plugin-ipfs'
 
   // this is a production mode plugin
   // bail during development
@@ -21,7 +21,7 @@ module.exports = (options, ctx) => {
       }
     },
     async generated() {
-      exec(`all-relative`, { cwd: outDir }, (error, stdout, stderr) => {
+      exec(`html-relative-paths`, { cwd: outDir }, (error, stdout, stderr) => {
         if (error) {
           console.error(error.message)
           return
