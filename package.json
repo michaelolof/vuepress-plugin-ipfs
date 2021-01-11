@@ -1,6 +1,6 @@
 {
   "name": "michaelolof-vuepress-plugin-ipfs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Host a VuePress project on IPFS",
   "main": "index.js",
   "scripts": {
